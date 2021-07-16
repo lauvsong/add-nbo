@@ -10,7 +10,7 @@ uint32_t make_nbo(char* filename){
     }
 
     uint32_t res;
-    fread(&res, sizeof(uint32_t), 1, fd);
+    fread(&res, 1, sizeof(uint32_t), fd);
     fclose(fd);
 
     return ntohl(res);
